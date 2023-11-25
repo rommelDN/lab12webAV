@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let post of posts" (click)="showDetails(post)">
+        {{post.id}} - {{post.name}}
+    </li>
+</ul>
+<app-post-details [post]="selectedPost" *ngIf="selectedPost"></app-post-details>

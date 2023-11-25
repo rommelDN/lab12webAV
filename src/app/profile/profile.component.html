@@ -1,0 +1,9 @@
+<!-- profile.component.html -->
+
+<div *ngIf="isAuthenticated()">
+  <p>Bienvenido al perfil</p>
+  <button (click)="logout()">Cerrar Sesión</button>
+</div>
+<div *ngIf="!isAuthenticated()">
+  <p>No estás autenticado. Inicia sesión para acceder al perfil.</p>
+</div>

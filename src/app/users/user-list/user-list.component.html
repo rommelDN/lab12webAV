@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let user of users" (click)="showDetailsU(user.id)">
+        {{user.id}} - {{user.name}}
+    </li>
+</ul>
+<app-user-details [userId]="selectedUserId" [users]="users" *ngIf="selectedUserId !== null" ></app-user-details>
